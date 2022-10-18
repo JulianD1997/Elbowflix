@@ -8,6 +8,7 @@
 }
 
 body {
+    background-color: rgb(0, 0, 0);
     font-family: "Source Code Pro", monospace;
 }
 
@@ -25,19 +26,18 @@ li {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    max-height:90px;
     border-radius: 0px 0px 10px 10px;
     box-shadow: 0px 1px 1px 1px rgb(4, 50, 66);
     margin-bottom: 0.7rem;
 }
 
-.nav_link {
+.nav__link {
     color: rgb(0, 0, 0);
 }
 
-/* padding igual para los elementos dentro de la barra de navegacion*/
-.nav_logo,
-.nav_menu,
-.burger {
+/* padding igual para los elementos dentro de la barra de nav_egacion*/
+.nav__logo,.nav__menu,.burger {
     padding: 1rem;
 }
 
@@ -53,22 +53,27 @@ li {
     height: 4px;
     margin: 0px 0px 5px 0px;
     background-color: rgb(255, 255, 255);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
-
 .burger.active .bar:nth-child(2) {
     opacity: 0;
 }
-
 .burger.active .bar:first-child {
-    transform: translateY(calc(4px + 5px)) rotate(45deg);
+    background-color: black;
+    position: fixed;
+    z-index: 150;
+    transform: rotate(45deg);
 }
 
 .burger.active .bar:last-child {
+    background-color: black;
+    position: fixed;
+    z-index: 150;
     transform: translateY(calc(-4px - 5px)) rotate(-45deg);
 }
 
-.nav_menu {
+.nav__menu {
+    padding: 50px 0px;
     font-size: 1.4rem;
     text-align: center;
     width: 100vw;
@@ -77,12 +82,13 @@ li {
     display: flex;
     flex-direction: column;
     background-color: var(--backgroundColor-nav-burger);
-    top: calc(2rem + 2.8rem);
+    top:0%;
     right: 100%;
-    transition: right 1s;
+    transition: right 0.5s;
+    z-index: 100;
 }
 
-.nav_item {
+.nav__item {
     cursor: pointer;
     opacity: 0.7;
     padding: 0.8rem;
@@ -92,21 +98,21 @@ li {
     transition: opacity 0.3s ease-in-out;
 }
 
-.nav_item>a {
+.nav__item > a {
     color: rgb(0, 0, 0);
 }
 
-.nav_item:hover {
+.nav__item:hover {
     opacity: 1;
     border-bottom: 3px solid rgb(0, 0, 0);
     font-weight: 700;
 }
 
-.nav_menu.active {
+.nav__menu.active {
     right: 0%;
 }
 
-.nav_logo {
+.nav__logo {
     cursor: pointer;
     margin: 0.3rem 0 0.3rem 1.5rem;
     text-transform: uppercase;
@@ -121,19 +127,19 @@ li {
     .burger {
         display: none;
     }
-    .nav_menu {
+    .nav__menu {
         position: static;
         flex-direction: row;
         background-color: transparent;
         width: auto;
         height: auto;
     }
-    .nav_item {
+    .nav__item {
         opacity: 1;
         border: none;
         transition: none;
     }
-    .nav_item:hover {
+    .nav__item:hover {
         border: none;
         opacity: 0.8;
         background-color: var(--backgroundColor-nav-hover);

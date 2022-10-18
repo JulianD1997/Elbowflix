@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/nav_bar.css">
+    <link rel="stylesheet" href="../styles/registro_style.css">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <script src="https://kit.fontawesome.com/90a3ea37c8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/footer_style.css">
+    <title>registro</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav__link nav__logo">Elbowflix</a>
+            <ul class="nav__menu">
+                <li class="nav__item"><a href="../index.html" class="nav__link"><i class="fa-solid fa-house"></i> Inicio
+                    </a></li>
+                <li class="nav__item"><a href="#" class="nav__link"><i class="fa-solid fa-film"></i> Peliculas </a></li>
+                <li class="nav__item"><a href="#" class="nav__link"><i class="fa-solid fa-clapperboard"></i> Generos
+                    </a>
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link"><i class="fa-solid fa-star"></i> Populares </a></li>
+                <li class="nav__item"><a href="#" class="nav__link"><i class="fa-solid fa-comment-dots"></i> Blog</a>
+                </li>
+                <li class="nav__item"><a href="/templates/registro.html" class="nav__link"><i
+                            class="fa-solid fa-clipboard"></i> sign in</a></li>
+                <li class="nav__item"><a href="#" class="nav__link"><i class="fa-solid fa-user"></i> log in</a></li>
+            </ul>
+            <div class="burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <h3 class="main__title">Registro</h3>
+        <section class="main__login">
+            <button class="login__button">
+                <picture><img src="https://storage.googleapis.com/support-kms-prod/ZAl1gIwyUsvfwxoW9ns47iJFioHXODBbIkrK"
+                        alt="logo_google"></picture>
+                <span class="span__login">Acceder con google</span>
+            </button>
+            <button class="twitter__button">
+                <img src="https://cdn-icons-png.flaticon.com/512/39/39552.png" alt="logo_twitter">
+            </button>
+        </section>
+        <hr class="main__divider">
+        </hr>
+        <section class="main__registrer">
+            <form class="main__form" action="" method="post">
+                <div class="form__container-user">
+                    <div class="form__container">
+                        <label for="name" class="form__label">Nombre</label>
+                        <input type="text" id="name" class="form__input" autocomplete="off" name="nombre">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span class="form__span">No debe llevar números ni símbolos</span>
+                    </div>
+                    <div class="form__container">
+                        <label for="username" class="form__label">Usuario</label>
+                        <input type="text" id="username" class="form__input" autocomplete="off" name="usuario">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span class="form__span">El usuario ya existe</span>
+                    </div>
+                </div>
+                <div class="form__container dos">
+                    <label for="email" class="form__label">Email</label>
+                    <input type="email" id="email" class="form__input" autocomplete="off" name="email">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    <span class="form__span">Correo incorrecto</span>
+                </div>
+                <div class="form__container">
+                    <label for="password" class="form__label">contraseña</label>
+                    <input type="password" id="password" class="form__input" autocomplete="off" name="contraseña">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    <span class="form__span">Contraseña débil</span>
+                </div>
+                <div class="form__container-check">
+                    <div>
+                        <input type="checkbox" id="checkbox" class="form__checkbox" name="checkbox">
+                        <label for="checkbox"><a href="#">Términos de servicio y política de privacidad</a></label>
+                    </div>
+                    <span class="form__span">Aceptar las condiciones</span>
+                </div>
+                <button type="submit" class="form__button">Crear cuenta</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="copy">
+            <span class="derechos"><i class="fa-regular fa-copyright"></i>2022</span>
+        </div>
+        <div class="social">
+            <span class="span_social">Redes</span>
+            <div class="social__links">
+                <a href="#" class="social__link"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="social__link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="social__link"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../scripts/formularios.js"></script>
+    <script src="../scripts/nav_bar.js"></script>
+</body>
+
+</html>

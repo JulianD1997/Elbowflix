@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+    color: rgb(255, 255, 255);
+    font-family: 'Ubuntu', sans-serif;   
+}
+/*estilos universales*/
+body{
+    
+    background-color: rgb(22, 23, 23);
+}
+button{
+    cursor: pointer;
+}
+/* centrar los objetos */
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main__title{
+    font-size: 2rem;
+    font-weight: 700;
+}
+/*estilo botones de logueo*/
+.main__login{
+    width: 100vw;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.login__button{
+    padding: 0 10px 0 5px;
+    height: 40px;
+    min-width: 200px;
+    background-color: rgb(26,115,232);
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.login__button picture{
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: white;
+}
+.login__button picture img{
+    height: 99%
+}
+.login__button span{
+    color: white;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+.twitter__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(242,242,242);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+.twitter__button img{
+    height: 80%;
+    opacity: 0.7;
+}
+/* hover botones */
+.main button{
+    transition: opacity 0.3s;
+}
+.main button:hover{
+    opacity: 0.8;
+    box-shadow: 0px 0px 3px 2px rgba(228, 228, 228, 0.544);
+}
+/* linea divisioria botones de logueo formulario */
+.main__divider{
+    width: 90%;
+    margin: 10px;
+    overflow: visible;
+    border:none;
+    border-top: 1px solid rgb(67, 66, 66);
+    color: rgba(255, 255, 255, 0.353);
+    text-align: center;
+}
+/* O centrado  */
+.main__divider:after{
+    content: "Ó";
+    display: inline-block;
+    position: relative;
+    top:-12px;
+    padding: 0 16px;
+    background-color: rgb(22, 23, 23);
+}
+/* posicion del formulario de registro */
+.main__registrer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.main__form{
+    padding: 1rem;
+    width: 100vw;
+}
+.form__container{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.form__container > i,span{
+    display: none;
+}
+.span__login{
+    display: block;
+}
+.form__label{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.form__input{
+    border-radius: 10px;
+    height: 45px;
+    border: 1px solid transparent;
+    background-color: rgb(33, 33, 33);
+    outline: none;
+    padding: 10px;
+}
+.form__input:is(:hover,:focus){
+    background-color: rgb(69, 64, 69);
+    color: white;
+    box-shadow: 
+        0 0 5px 2px rgb(234,76,137),
+        0 0 3px rgba(255, 255, 255, 0.526);
+}
+.form__container-check{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap:10px;
+    margin-bottom: 20px;
+}
+#checkbox{
+    width: 17px;
+    height: 17px;
+}
+.form__button{
+    width: 50%;
+    height: 45px;
+    background-color: rgb(234,76,137);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    border:none;
+    border-radius: 10px;
+}
+.form__span{
+    color: rgb(133, 11, 11);
+}
+.correcto{
+    position: relative;
+}
+.correcto > .fa-circle-check{
+    display: block;
+    color: rgb(30, 255, 0);
+    position: absolute;
+    top: 50px;
+    left: 90%;
+}
+.incorrecto{
+    position: relative;
+}
+.incorrecto > .fa-circle-xmark{
+    display: block;
+    color: rgb(255, 0, 0);
+    position: absolute;
+    top: 50px;
+    left: 90%;
+}
+.incorrecto > .form__span{
+    display: block;
+}
+.incorrecto > div .form__span{
+    display: block;
+}
+@media (min-width: 768px){
+    .main__form{
+        padding: 1rem;
+        width: auto;
+    }
+    .form__container-user{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .main{
+        height: 90vh;
+    }
+    .correcto.dos > .fa-circle-check{
+        left: 95%;
+    }
+    .correcto:nth-child(3) > .fa-circle-check{
+        left: 95%;
+    }
+    .incorrecto.dos > .fa-circle-xmark{
+        left: 95%;
+    }
+    .incorrecto:nth-child(3) > .fa-circle-xmark{
+        left: 95%;
+    }
+}

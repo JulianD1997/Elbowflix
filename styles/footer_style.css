@@ -18,8 +18,8 @@ footer{
     box-shadow: 0px -1px 1px 1px rgb(4, 50, 66);
 }
 .derechos > i{
-    margin-right: 4px;
-    opacity: 0.7;
+    opacity: 1;
+    color:rgb(36, 36, 36)
 }
 .derechos{
     text-align: center;
@@ -29,13 +29,13 @@ footer{
     display: block;
     text-align: center;
 }
-.social-links{
+.social__links{
     text-align: center;
 }
-.social-link{
+.social__link{
     transition: text-decoration 0.5s;
 }
-.social-link:hover > i{
+.social__link:hover > i{
     color: white;
 }
 /*color iconos sociales*/
