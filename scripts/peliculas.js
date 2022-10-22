@@ -1,3 +1,5 @@
+let pagina = 1
+//clase pelicula
 class Pelicula {
     id_pelicula
     titulo
@@ -39,12 +41,12 @@ class Pelicula {
         return card
     }
 }
-
+// section peliculas
+const peliculasSection = document.getElementById('peliculas')
 const cargarPeliculas = async () => {
     try {
-        const carruselPopular = document.getElementsByClassName('popular')
         const listaPeliculas = []
-        const api_string = 'https://api.themoviedb.org/3/movie/popular?api_key=39a5c0430fa9ff6da60018cc92f76774&language=es-US&page=1'
+        const api_string =`https://api.themoviedb.org/3/movie/popular?api_key=39a5c0430fa9ff6da60018cc92f76774&language=es-US&page=${pagina}`
         const resultado = await fetch(api_string)
         if (resultado.status === 200) {
             const datos = await resultado.json()
@@ -52,7 +54,8 @@ const cargarPeliculas = async () => {
                 listaPeliculas.push(new Pelicula(datoPelicula.id, datoPelicula.title, datoPelicula.overview, datoPelicula.release_date, datoPelicula.backdrop_path, datoPelicula.poster_path))
             })
             for (i of listaPeliculas) {
-                carruselPopular[0].appendChild(i.cardPelicula())
+
+                peliculasSection.appendChild(i.cardPelicula())
             }
         }
         else if (resultado.status === 401) {
@@ -69,4 +72,29 @@ const cargarPeliculas = async () => {
     }
 }
 
+// botones pagina siguiente
+const anterior = document.getElementsByClassName('section__button')[0]
+const siguiente = document.getElementsByClassName('section__button')[1]
+anterior.addEventListener('click', () =>{
+    if(pagina > 1){
+        while(document.getElementsByClassName('card').length > 0){
+            for(nodo of document.getElementsByClassName('card')){
+                nodo.remove()
+            }
+        }
+        pagina--
+        cargarPeliculas()
+    }
+})
+siguiente.addEventListener('click', () =>{
+    if(pagina < 1000){
+        while(document.getElementsByClassName('card').length > 0){
+            for(nodo of document.getElementsByClassName('card')){
+                nodo.remove()
+            }
+        }
+        pagina++
+        cargarPeliculas()
+    }
+})
 cargarPeliculas()

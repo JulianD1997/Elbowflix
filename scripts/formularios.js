@@ -65,6 +65,10 @@ inputs.forEach(input=>{
 formularios[0].addEventListener('submit',(event)=>{
     event.preventDefault()
     if(camposCompletos){
-        formularios[0].requestFullscreen()
+        formularios[0].reset()
+        document.getElementsByClassName('form__container')[0].classList.remove('correcto')
+        document.getElementsByClassName('form__container')[1].classList.remove('correcto')
+        document.getElementsByClassName('form__container')[2].classList.remove('correcto')
+        document.getElementsByClassName('form__container')[3].classList.remove('correcto')
     }
 })

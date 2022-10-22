@@ -5,26 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/nav_bar.css">
+    <link rel="stylesheet" href="styles/footer_style.css">
     <link rel="stylesheet" href="/styles/normalize.css">
     <script src="https://kit.fontawesome.com/90a3ea37c8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/footer_style.css">
-    <link rel="stylesheet" href="styles/main_style.css">
     <link rel="stylesheet" href="styles/index_style.css">
     <title>Elbowflix</title>
 </head>
 <body>
     <header class="header">
         <nav class="nav">
-            <a href="#" class="nav__link nav__logo">Elbowflix</a>
+            <a href="./index.html" class="nav__link nav__logo">Elbowflix</a>
             <ul class="nav__menu">
                 <li class="nav__item"><a href="./index.html" class="nav__link"><i class="fa-solid fa-house"></i> Inicio </a></li>
-                <li class="nav__item"><a href="#" class="nav__link"><i class="fa-solid fa-film"></i> Peliculas </a></li>
-                <li class="nav__item"><a href="#" class="nav__link"><i class="fa-solid fa-clapperboard"></i> Generos </a>
-                </li>
-                <li class="nav__item"><a href="#" class="nav__link"><i class="fa-solid fa-star"></i> Populares </a></li>
-                <li class="nav__item"><a href="#" class="nav__link"><i class="fa-solid fa-comment-dots"></i> Blog</a></li>
-                <li class="nav__item"><a href="/templates/registro.html" class="nav__link"><i class="fa-solid fa-clipboard"></i> sign in</a></li>
-                <li class="nav__item"><a href="#" class="nav__link"><i class="fa-solid fa-user"></i> log in</a></li>
+                <li class="nav__item"><a href="./templates/peliculas.html" class="nav__link"><i class="fa-solid fa-film"></i> Peliculas </a></li>
+                <li class="nav__item"><a href="./templates/series.html" class="nav__link"><i class="fa-solid fa-tv"></i> Series </a></li>
+                <li class="nav__item"><a href="./templates/registro.html" class="nav__link"><i class="fa-solid fa-clipboard"></i> sign in</a></li>
+                <li class="nav__item"><a href="./templates/login.html" class="nav__link"><i class="fa-solid fa-user"></i> log in</a></li>
             </ul>
             <div class="burger">
                 <span class="bar"></span>
@@ -129,13 +125,25 @@
             </div>
         </div>
     </aside>
-    <main class="main">
-        
+    <main class="main">    
         <section class="section">
             <h2 class="section__title">Populares</h2>
             <div class="popular">
-
             </div>
+        </section>
+        <section class="section__spam">
+            <div class="card__spam">
+                <div class="card__content">
+                    <p class="card__description">Series y películas actualizadas constantemente</p>
+                    <span>Registrate para saber mas</span>
+                </div>
+                <div class="card__content">
+                    <button class="button" contenido="Clip!">
+                        <span class="button__span">Registrate</span>
+                    </button>
+                </div>
+            </div>
+            
         </section>
     </main>
     <footer class="footer">
@@ -147,12 +155,12 @@
             <div class="social__links">
                 <a href="#" class="social__link"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#" class="social__link"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="social__link"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/JulianD1997/proyecto_codo_a_codo"  class="social__link"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </footer>
     <script src="./scripts/nav_bar.js"></script>
-    <script src="./scripts/datos_api.js"></script>
+    <script src="./scripts/peliculas_populares.js"></script>
 </body>
 
 </html>

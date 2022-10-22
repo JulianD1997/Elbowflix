@@ -1,0 +1,139 @@
+body {
+    background-color: rgba(133, 133, 133, 0.9);
+}
+.main {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section__poster {
+    display: none;
+}
+
+.section__form {
+    background-color: rgb(255, 255, 255);
+    margin: 15px;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.713),
+        1px 1px 6px 2px rgba(0, 0, 0, 0.6),
+        -1px 1px 2px 2px rgba(0, 0, 0, 0.745),
+        0px 0px 6px 5px rgba(0, 0, 0, 0.265);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 20rem;
+    border: 1px solid rgba(255, 255, 255);
+    border-radius: 20px;
+}
+
+.form {
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form__container {
+    margin-bottom: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.input__label {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    opacity: 0.5;
+}
+
+.input {
+    border-radius: 5px 5px 0px 0px;
+    margin: 10px 0px;
+    height: 35px;
+    min-width: 200px;
+    max-width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.button {
+    margin-top: 30px;
+    align-self: center;
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(97, 203, 252);
+    box-shadow: -2px -2px 2px 1px rgba(0, 0, 0, 0.359);
+    transition: 500ms;
+}
+
+.input:hover {
+    background-color: rgba(205, 205, 205, 0.176);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.573);
+}
+
+.input:focus {
+    border-bottom: 1px solid rgba(25, 0, 255, 1);
+}
+
+.input:focus+.input__label {
+    animation: text-transform 500ms ease-in-out forwards;
+}
+.oculto{
+    display: none;
+}
+.button:hover{
+    background-color: blue;
+    color: white;
+}
+.button:is(:hover,:active){
+    transform: translate(-2px, -2px);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.359);
+}
+@keyframes text-transform {
+    0% {
+
+    }
+    100% {
+        color: rgb(25, 0, 255);
+        opacity: 1;
+        top: -10px;
+        left: -5px;
+        transform: scale(0.9);
+    }
+}
+@media (min-width: 600px){
+    .section{
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        padding: 20px;
+    }
+    .section__poster{
+        width: 50%;
+        height: 100%;
+        display: block;
+        background-image: url('../img/login.jpg');
+        border-radius: 20px 0px 0px 20px;
+        opacity: 0.8;
+    }
+    .section__form{
+        height: 100%;
+        width: 50%;
+        border: none;
+        box-shadow: none;
+        border-radius: none;
+        margin: 0px;
+        border-radius: 0px 20px 20px 0px;
+    }
+}
